@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Energy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background: #0056b3;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 80px 20px;
+      background: linear-gradient(45deg, #007bff, #00bcd4);
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      color: #007bff;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+    .carousel img {
+      width: 300px;
+      border-radius: 8px;
+      scroll-snap-align: center;
+    }
+    .social, .contact {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-align: center;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebc59;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <a class="whatsapp-float" href="https://wa.me/5574999610236" target="_blank">💬</a>
+  <div class="lang-toggle">
+    <a href="#" onclick="toggleLanguage('pt')">🇧🇷</a>
+    <a href="#" onclick="toggleLanguage('en')">🇺🇸</a>
+  </div>
+
+  <header>
+    <h1>Clean Energy</h1>
+    <p class="pt">Energia solar para um futuro sustentável</p>
+    <p class="en" style="display:none">Solar energy for a sustainable future</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#orcamento">Orçamento</a>
+    <a href="#contato">Contato</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <section class="section" id="projetos">
+    <h3 class="pt">Projetos Realizados</h3>
+    <h3 class="en" style="display:none">Completed Projects</h3>
+    <div class="carousel">
+      <img src="projetos/projeto1.jpg" alt="Projeto 1">
+      <img src="projetos/projeto2.jpg" alt="Projeto 2">
+      <img src="projetos/projeto3.jpg" alt="Projeto 3">
+      <img src="projetos/projeto4.jpg" alt="Projeto 4">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Clean Energy. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleLanguage(lang) {
+      const pt = document.querySelectorAll('.pt');
+      const en = document.querySelectorAll('.en');
+      pt.forEach(el => el.style.display = (lang === 'pt') ? '' : 'none');
+      en.forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
+    }
+  </script>
+</body>
+</html>
